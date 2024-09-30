@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title style="text-align: center">MO Galleri</title>
+    <style>
+        body {
+            /* grid layout - sidens struktur */
+            display: grid;
+            width: 100vw;
+            grid-template-columns: 15% 10vw 10vw 10vw 1fr 15%;
+            grid-template-rows: 150px 50px 300px 17vw 17vw 50px;
+ /*           grid-template-areas:
+                'header header header header header header'
+                'nav nav nav nav nav nav'
+                'main main main main main main'
+                'main main main main main main'
+                'main main main main main main'
+                'footer footer footer footer footer footer';*/
+            /* styling af siden */
+            background-color: #3d545c;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header {
+            /*grid-area: header;*/
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            color: white;
+            align-content: center;
+            text-align: center;
+            font-size: 5em;
+            font-family: 'Script MT','Footlight MT', sans-serif;
+            background-color: #29383d;
+            letter-spacing: 3px;
+            text-shadow: 5px 2.5px 0 rgba(0, 0, 0, 1);
+        }
+
+        nav {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: #996666;
+
+            /*nyt grid til at navigationselementer*/
+            display: grid;
+            grid-template-columns: 15% 1fr 15%;
+            grid-template-rows: 100%;
+            grid-column-gap: 10px;
+        }
+
+        .navIndhold {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end:2;
+            /*Flexbox til placering af navigationselementer*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .navItem {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            /*border: 1px solid black*/
+        }
+
+        .BareSideLeft {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            border: 1px solid black;
+        }
+
+        .BareSideRight {
+            grid-column-start: 6;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            border: 1px solid black;
+        }
+
+
+        main {
+            /*Placring i ydre grid*/
+            grid-column-start: 2;
+            grid-column-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            /*Etablering af nyt grid til indhold*/
+            display: grid;
+            grid-template-columns: 17vw 17vw 17vw 1fr;
+            grid-template-rows: 300px 17vw 17vw;
+
+            /*background-color: cornflowerblue;*/
+            border: 1px dashed black;
+            /*column-gap: 15px;*/
+            /*row-gap: 15px;*/
+            
+        }
+
+        .CrownPic {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            border: 1px solid black;
+            /*background-color: blue;*/
+        }
+
+        
+        .billede {
+/*            width: 15vw;
+            height: 15vw;
+*/            border: 6px solid #668c99;
+              margin: 6px;
+        }
+
+        .SideBarTekst {
+            grid-column-start: 4;
+            grid-column-end:5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            border: 1px red dotted; 
+        }
+
+/*        footer {
+            grid-area: footer;
+            background-color: #29383d;
+            height: 1em;
+            color: white;
+            font-size:1em;
+            font-family: sans-serif;
+            padding: 20px;
+            letter-spacing: 3px;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }*/
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="Header"> MO Galleri</div>
+    </header>
+
+    <nav>
+        <div class="navIndhold">
+            <div class="navItem">GALLERI</div>
+            <div class="navItem">TEKNIKKER</div>
+            <div class="navItem">INSPIRATION</div>
+            <div class="navItem">OM MO</div>
+            <div class="navItem">KONTAKT</div>
+        </div>
+    </nav>
+
+    <!--Begræsning af sidebredde-->
+    <div class="BareSideLeft"></div>
+    <div class="BareSideRight"></div>
+
+    <main>
+        <div class="CrownPic"></div>
+        <div class="billede">1</div>
+        <div class="billede">2</div>
+        <div class="billede">3</div>
+        <div class="billede">4</div>
+        <div class="SideBarTekst"></div>
+
+        <!--<div style="border:1px solid black; grid-column-start:1; grid-column-end: 2; grid-row-start: 5; grid-row-end:6;">e</div>-->
+        <!--<article class="CrownPic">
+        d
+    </article>-->
+        <!--<article>
+        <section></section>
+        <aside></aside>
+    </article>-->
+        <!--<div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>-->
+        <!--<img class="billede" src="billeder/Eksempel.png" />
+    <img class="billede" src="billeder/Eksempel.png" />
+    <img class="billede" src="billeder/Eksempel.png" />-->
+        <!--<div><img class="billede" src="billeder/Eksempel.png" /> </div>
+    <div><img class="billede" src="billeder/Eksempel.png" /> </div>
+    <div><img class="billede" src="billeder/Eksempel.png" /> </div>
+    <div><img class="billede" src="billeder/Eksempel.png" /> </div>
+    <div><img class="billede" src="billeder/Eksempel.png" /> </div>-->
+
+    </main>
+
+
+
+    <!--<footer>copyright</footer>-->
+</body>
+</html>
